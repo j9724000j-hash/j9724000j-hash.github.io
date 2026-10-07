@@ -18,6 +18,8 @@ jobs:
         with:
           repository: j9724000j-hash/Dr_S
           ref: arena/63a04200-dr-s
+          token: ${{ secrets.SOURCE_REPO_TOKEN || github.token }}
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
